@@ -5,7 +5,7 @@ import os
 import csv
 # pdb.set_trace()
 
-data = pd.read_csv('raw_data/sha256_family.csv')
+data = pd.read_csv('./raw_data/sha256_family.csv')
 
 family_column = data["family"]
 sha_column = data["sha256"]
@@ -42,15 +42,15 @@ def count_feature_set(lines):
 
 feature_count = []
 def read_sha_files():
-    for filename in os.listdir('raw_data/feature_vectors'):
-        sha_data = open('raw_data/feature_vectors/'+ filename)
+    for filename in os.listdir('./raw_data/feature_vectors'):
+        sha_data = open('./raw_data/feature_vectors/'+ filename)
         feature_count.append([filename] + count_feature_set(sha_data))
         sha_data.close()
     return feature_count
 
 header = ['sha256', 'feature', 'permission', 'activity', 'intent', 'api_call', 'real_permission', 'call', 'url' ]
 def create_csv_for_sha_data():
-    with open("processed_data/feature_vectors.csv", "wt", newline ='') as file:
+    with open("./processed_data/feature_vectors.csv", "wt", newline ='') as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow(i for i in header)
         for j in read_sha_files():
@@ -58,7 +58,7 @@ def create_csv_for_sha_data():
 
 create_csv_for_sha_data()
 
-feature_vectors_data = pd.read_csv('processed_data/feature_vectors.csv')
+feature_vectors_data = pd.read_csv('./processed_data/feature_vectors.csv')
 sha256_data = feature_vectors_data['sha256']
 
 """
@@ -73,4 +73,4 @@ mask = np.in1d(sha256_data, sha_column)
 # feature_vectors_data
 output = pd.DataFrame({'output' : mask })
 feature_vectors_data = feature_vectors_data.merge(output, left_index = True, right_index = True)
-feature_vectors_data.to_csv('processed_data/feature_vectors_data.csv')
+feature_vectors_data.to_csv('./processed_data/feature_vectors_data.csv')
