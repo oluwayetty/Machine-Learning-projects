@@ -48,7 +48,7 @@ def read_sha_files():
         sha_data.close()
     return feature_count
 
-header = ['sha256', 'feature', 'permission', 'activity', 'intent', 'api_call', 'real_permission', 'call', 'url' ]
+header = ['Sha256', 'Feature', 'Permission', 'Activity', 'Intent', 'Api_call', 'Real_permission', 'Call', 'Url' ]
 def create_csv_for_sha_data():
     with open("./processed_data/feature_vectors.csv", "wt", newline ='') as file:
         writer = csv.writer(file, delimiter=',')
@@ -58,8 +58,8 @@ def create_csv_for_sha_data():
 
 create_csv_for_sha_data()
 
-feature_vectors_data = pd.read_csv('./processed_data/feature_vectors.csv')
-sha256_data = feature_vectors_data['sha256']
+datasets = pd.read_csv('./processed_data/feature_vectors.csv')
+sha256_data = datasets['Sha256']
 
 """
     map feature_vectors sha with it's corresponding
@@ -70,7 +70,7 @@ sha256_data = feature_vectors_data['sha256']
 mask = np.in1d(sha256_data, sha_column)
 
 
-# feature_vectors_data
-output = pd.DataFrame({'output' : mask })
-feature_vectors_data = feature_vectors_data.merge(output, left_index = True, right_index = True)
-feature_vectors_data.to_csv('./processed_data/feature_vectors_data.csv')
+# datasets
+output = pd.DataFrame({'Class' : mask })
+datasets = datasets.merge(output, left_index = True, right_index = True)
+datasets.to_csv('./processed_data/datasets.csv')
