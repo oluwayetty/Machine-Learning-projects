@@ -3,3 +3,4 @@ raw_data
 .DS_Store
 pdf explanation.pdf
 .idea/
+scripts/__pycache__

@@ -56,7 +56,8 @@ def create_csv_for_sha_data():
         for j in read_sha_files():
             writer.writerow(j)
 
-create_csv_for_sha_data()
+if __name__ == "__main__":
+    create_csv_for_sha_data()
 
 datasets = pd.read_csv('./processed_data/feature_vectors.csv')
 sha256_data = datasets['Sha256']
@@ -68,7 +69,6 @@ sha256_data = datasets['Sha256']
     else, otherwise
 """
 mask = np.in1d(sha256_data, sha_column)
-
 
 # datasets
 output = pd.DataFrame({'Class' : mask })
