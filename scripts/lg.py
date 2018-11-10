@@ -10,10 +10,6 @@ from sklearn.ensemble import RandomForestClassifier as RFC
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
-from sklearn.metrics import precision_score as precision
-from sklearn.metrics import recall_score as recall
-from sklearn.metrics import f1_score as f1
-from sklearn.metrics import roc_auc_score
 import matplotlib.pyplot as plt
 
 from imblearn.over_sampling import SMOTE, ADASYN
