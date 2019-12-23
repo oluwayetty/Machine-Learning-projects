@@ -13,5 +13,4 @@ A simple implementation of Naive bayes on spam emails classification
 ![](https://github.com/oluwayetty/malware-analysis/blob/master/venice.jpg)
 
 This project is focused on the detection and classification of Venice boats using Deep learning. Past related project used the following classification methods: K-Nearest Neighbor (KNN), a Decision Tree Learning Algorithm, and Random Forest (RF) from
-the WEKA environment. In this project, I built a convolution neural network(CNN) that can detect Venice boats and identify its category while explaining
-the techniques used throughout the process.
+the WEKA environment. In this project, I built a convolution neural network(CNN) that can detect Venice boats and identify its category while explaining the techniques used throughout the process. Datasets can be found [here](http://users.diag.uniroma1.it/bloisi/papers/bloisi-vrs2015-draft.pdf)
