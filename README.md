@@ -6,6 +6,7 @@ techniques. In this work, I employed a robust and efficient approach for malware
 binary classification to determine if an application is malware or not.
 
 ## Second project is in the second folder is on Naive Bayes
+![](https://github.com/oluwayetty/malware-analysis/blob/master/naive.png)
 A simple implementation of Naive bayes on spam emails classification
 
 ## Third project is in the third folder is on Malware Analysis
