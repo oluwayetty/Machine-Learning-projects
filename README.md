@@ -9,7 +9,7 @@ binary classification to determine if an application is malware or not.
 ![](https://github.com/oluwayetty/malware-analysis/blob/master/naive.png)
 A simple implementation of Naive bayes on spam emails classification
 
-## Third project is in the third folder is on Malware Analysis
+## Third project is in the third folder is on Venice boat classification
 ![](https://github.com/oluwayetty/malware-analysis/blob/master/venice.jpg)
 
 This project is focused on the detection and classification of Venice boats using Deep learning. Past related project used the following classification methods: K-Nearest Neighbor (KNN), a Decision Tree Learning Algorithm, and Random Forest (RF) from
